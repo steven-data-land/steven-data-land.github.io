@@ -170,6 +170,7 @@
   .group-head span { display: flex; align-items: center; gap: 12px; }
   .group-head small { color: var(--muted); }
   .modules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .modules > .mod:last-child:nth-child(odd) { grid-column: 1 / -1; }
 
   /* Every project module shares this exact anatomy:
      labels / title / one-line summary / metric / stack / details bar */
@@ -439,52 +440,6 @@
 
             <article class="mod">
               <div class="body">
-                <div class="top cap"><span>Reporting</span><span>2026</span></div>
-                <h3>Committed capital dashboard</h3>
-                <p class="summary">The first dashboard for client committed capital, refreshed straight from the CRM.</p>
-                <div class="metric"><div><strong>10+</strong><span>asset class strategies in one quarterly view</span></div></div>
-                <div class="stack"><span>Power BI</span><span>Power Query</span><span>Dynamics 365</span></div>
-              </div>
-              <div class="foot cap"><span>View details</span><b aria-hidden="true">+</b></div>
-              <button class="open" aria-label="View details: Committed capital dashboard" data-detail="d-capital"></button>
-              <div class="detail" id="d-capital">
-                <p class="kicker cap">Work project / Reporting</p>
-                <h3>Committed capital dashboard</h3>
-                <h4>The problem</h4>
-                <p>No dashboard existed. Every quarter, client commitment data was exported from the CRM and rebuilt in Excel by hand.</p>
-                <h4>What I built</h4>
-                <p>A Power BI report on a live Dynamics 365 connection, with Power Query steps that clean and standardize the data on refresh.</p>
-                <h4>Result</h4>
-                <p>Quarterly visibility into client committed capital across 10+ asset class strategies, with no manual rebuild.</p>
-                <div class="stack"><span>Power BI</span><span>Power Query</span><span>Dynamics 365</span><span>Dataverse</span></div>
-              </div>
-            </article>
-
-            <article class="mod">
-              <div class="body">
-                <div class="top cap"><span>Data migration</span><span>2026</span></div>
-                <h3>Client CRM migration</h3>
-                <p class="summary">Moved client data between two CRMs without force-fitting fields that didn't match.</p>
-                <div class="metric"><div><strong>2,500</strong><span>client records mapped field by field</span></div></div>
-                <div class="stack"><span>Dataverse</span><span>Dynamics 365</span><span>Excel</span></div>
-              </div>
-              <div class="foot cap"><span>View details</span><b aria-hidden="true">+</b></div>
-              <button class="open" aria-label="View details: Client CRM migration" data-detail="d-migration"></button>
-              <div class="detail" id="d-migration">
-                <p class="kicker cap">Work project / Data migration</p>
-                <h3>Client CRM migration</h3>
-                <h4>The problem</h4>
-                <p>About 2,500 client records had to move from Wealthbox into the firm's Dataverse-based CRM, and the two systems didn't define their fields the same way.</p>
-                <h4>What I did</h4>
-                <p>Gathered requirements with the CFO, mapped what each field meant on both sides, and worked with the CRM consultants to add new columns for deeper analysis.</p>
-                <h4>Result</h4>
-                <p>A field map that puts each record where it belongs instead of forcing it into the nearest column.</p>
-                <div class="stack"><span>Dataverse</span><span>Dynamics 365</span><span>Excel</span></div>
-              </div>
-            </article>
-
-            <article class="mod">
-              <div class="body">
                 <div class="top cap"><span>Reporting</span><span>2025</span></div>
                 <h3>Land acquisition reports</h3>
                 <p class="summary">Built production reports from scratch on a messy legacy database.</p>
@@ -526,6 +481,29 @@
                 <h4>Result</h4>
                 <p>My dashboards became the standard replicated across 7 U.S. divisions.</p>
                 <div class="stack"><span>HubSpot</span><span>KPI design</span><span>Dashboards</span></div>
+              </div>
+            </article>
+
+            <article class="mod">
+              <div class="body">
+                <div class="top cap"><span>Reporting</span><span>2026</span></div>
+                <h3>Committed capital dashboard</h3>
+                <p class="summary">The first dashboard for client committed capital, refreshed straight from the CRM.</p>
+                <div class="metric"><div><strong>10+</strong><span>asset class strategies in one quarterly view</span></div></div>
+                <div class="stack"><span>Power BI</span><span>Power Query</span><span>Dynamics 365</span></div>
+              </div>
+              <div class="foot cap"><span>View details</span><b aria-hidden="true">+</b></div>
+              <button class="open" aria-label="View details: Committed capital dashboard" data-detail="d-capital"></button>
+              <div class="detail" id="d-capital">
+                <p class="kicker cap">Work project / Reporting</p>
+                <h3>Committed capital dashboard</h3>
+                <h4>The problem</h4>
+                <p>No dashboard existed. Every quarter, client commitment data was exported from the CRM and rebuilt in Excel by hand.</p>
+                <h4>What I built</h4>
+                <p>A Power BI report on a live Dynamics 365 connection, with Power Query steps that clean and standardize the data on refresh.</p>
+                <h4>Result</h4>
+                <p>Quarterly visibility into client committed capital across 10+ asset class strategies, with no manual rebuild.</p>
+                <div class="stack"><span>Power BI</span><span>Power Query</span><span>Dynamics 365</span><span>Dataverse</span></div>
               </div>
             </article>
           </div>
